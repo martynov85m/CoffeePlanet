@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA,KACE,WAAA,IAGF,QACE,MAAA","file":"styles.css","sourcesContent":["body {\n  background: red;\n}\n\nbody h1 {\n  color: #111eee;\n}"]}
