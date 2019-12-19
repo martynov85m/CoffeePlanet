@@ -17,50 +17,6 @@
 		<! [endif]-->	
 </head>
 	<body class="bg-color">
-		<main class="container">
-			<h1 class="visually-hidden">Отзывы</h1>
-			<section>
-				<p class="header">Что говорят о нас клиенты?</p>
-				{% set usersData = [
-					{
-						name:'Denis Bulgakov',
-						header:'Денис Булгаков',
-						src: 'img/man01.jpg',
-						date:'30.04.2019'
-					},
-					{
-						name:'Andrei Fedorov',
-						header:'Андрей Фёдоров',
-						src: 'img/man02.jpg',
-						date:'24.08.2018'
-					},
-					{
-						name:'Anton Petrov',
-						header:'Антон Петров',
-						src: 'img/man03.jpg',
-						date:'12.05.2018'
-					},
-					{
-						name:'Viktor Tkachenko',
-						header:'Виктор Ткаченко',
-						src: 'img/man04.jpg',
-						date:'12.01.2018'
-					}
-					] %}
-					<ul class="clearfix">
-						{% for user in usersData %}
-						<li class="card">						
-							<figure>
-								<img class="card_photo" src="{{ user.src }}" alt="{{ user.name }}">
-								<figcaption class="card_title">{{ user.header }}</figcaption>
-							</figure>
-							<p class="card_feedback" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur debitis voluptatibus consequatur atque sapiente qui, illum aperiam alias quas cupiditate temporibus, quod sint ullam adipisci voluptatem deserunt sunt, veniam eum.</p>
-							<time class="card_date">{{ user.date }}</time>
-						</li>
-						{% endfor %}
-					</ul>
-				</section>
-			</main>
 			<script src="./js/js.js"></script>
 		</body>
 		</html>
