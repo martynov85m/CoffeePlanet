@@ -2,7 +2,9 @@
 @import 'libs/vars.less';
 @import 'libs/mixins.less';
 
-* {
+*,
+*:before,
+*:after{
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
@@ -16,8 +18,13 @@
 	margin: 0 auto;
 }
 .visually-hidden {
+	width: 1px;
+	height: 1px;
+	margin-top: -1px;
+	margin-left: -1px;
+	overflow: hidden;
 	position: absolute;
-	clip: rect(0 0 0 0);
+	clip: rect(0,0,0,0);
 }
 .header {
 	font-family: sans-serif;
