@@ -47,7 +47,7 @@
 						date:'12.01.2018'
 					}
 					] %}
-					<ul class="">
+					<ul class="rows">
 						{% for user in usersData %}
 						<li class="card">						
 							<figure>
@@ -59,6 +59,42 @@
 						</li>
 						{% endfor %}
 					</ul>
+				</section>
+				<section class="feature">
+					<h2 class="feature_head">Our features</h2>
+						<p class="feature_about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste maiores, nihil exercitationem odio consequatur distinctio earum officiis suscipit quidem accusantium reiciendis dolorem architecto possimus doloribus? Non porro quam repudiandae!</p>
+						{% set featuresData = [
+							{
+								name:'Coffee and tea',
+								src: 'img/coffee.jpg',
+								text:'Coffee and tea'
+							},
+							{
+								name:'Coffee and tea',
+								src: 'img/coffee.jpg',
+								text:'Tasty sweets'
+							},
+							{
+								name:'Coffee and tea',
+								src: 'img/coffee.jpg',
+								text:'Free WiFi'
+							},
+							{
+								name:'Coffee and tea',
+								src: 'img/coffee.jpg',
+								text:'Comfortable seats'
+							}
+							] %}
+							<ul class="feature_rows">
+								{% for feature in featuresData %}
+								<li class="feature_card">
+									<figure>
+									<img class="feature_icon" src="{{ feature.src }}" alt="{{ feature.name }}">
+									</figure>
+								<p class="feature_text">{{ feature.text }}</p>
+								</li>
+								{% endfor %}
+							</ul>
 				</section>
 			</main>
 			<script src="./js/js.js"></script>
