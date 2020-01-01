@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="favicon.png">
 	<title> CoffeePlanet </title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.css">
 
 	<!-- HTML5 shim and Respond.js-->
@@ -20,6 +20,42 @@
 	<body class="bg-color">
 		<main class="container">
 			<h1 class="visually-hidden">Отзывы</h1>
+			<section class="feature">
+				<h2 class="feature__head">Our features</h2>
+					<p class="feature__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste maiores, nihil exercitationem odio consequatur distinctio earum officiis suscipit quidem accusantium reiciendis dolorem architecto possimus doloribus? Non porro quam repudiandae!</p>
+					{% set featuresData = [
+						{
+							name:'Coffee and tea',
+							src: '../img/icons/noun_Coffee_848419.svg',
+							text:'Coffee and tea'
+						},
+						{
+							name:'Coffee and tea',
+							src: '../img/icons/noun_muffin_572526.svg',
+							text:'Tasty sweets'
+						},
+						{
+							name:'Coffee and tea',
+							src: '../img/icons/noun_wifi_2452937.svg',
+							text:'Free WiFi'
+						},
+						{
+							name:'Coffee and tea',
+							src: '../img/icons/noun_Sofa_1526269.svg',
+							text:'Comfortable seats'
+						}
+						] %}
+						<ul class="feature__rows">
+							{% for feature in featuresData %}
+							<li class="feature__card">
+								<figure>
+									<img class="feature__icon" src="{{ feature.src }}" alt="{{ feature.name }}">
+								</figure>
+								<figcaption class="feature__text">{{ feature.text }}</figcaption>
+							</li>
+							{% endfor %}
+						</ul>
+			</section>
 			<section >
 				<p class="header">Our happy visitors:</p>
 				{% set usersData = [
@@ -60,42 +96,6 @@
 					</li>
 					{% endfor %}
 				</ul>
-			</section>
-			<section class="feature">
-				<h2 class="feature__head">Our features</h2>
-					<p class="feature__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste maiores, nihil exercitationem odio consequatur distinctio earum officiis suscipit quidem accusantium reiciendis dolorem architecto possimus doloribus? Non porro quam repudiandae!</p>
-					{% set featuresData = [
-						{
-							name:'Coffee and tea',
-							src: '../img/icons/noun_Coffee_848419.svg',
-							text:'Coffee and tea'
-						},
-						{
-							name:'Coffee and tea',
-							src: '../img/icons/noun_muffin_572526.svg',
-							text:'Tasty sweets'
-						},
-						{
-							name:'Coffee and tea',
-							src: '../img/icons/noun_wifi_2452937.svg',
-							text:'Free WiFi'
-						},
-						{
-							name:'Coffee and tea',
-							src: '../img/icons/noun_Sofa_1526269.svg',
-							text:'Comfortable seats'
-						}
-						] %}
-						<ul class="feature__rows">
-							{% for feature in featuresData %}
-							<li class="feature__card">
-								<figure>
-									<img class="feature__icon" src="{{ feature.src }}" alt="{{ feature.name }}">
-								</figure>
-								<figcaption class="feature__text">{{ feature.text }}</figcaption>
-							</li>
-							{% endfor %}
-						</ul>
 			</section>
 		</main>
 		<script src="./js/js.js"></script>
