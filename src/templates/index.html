@@ -21,7 +21,7 @@
 		<header class="header">
 			<nav class="navigation container">
 				<a href="index.html" class="navigation__logo">
-					<img src="../img/logo.png" alt="CoffeePlanet logotype" class="logotype">
+					<img src="img/logo.png" alt="CoffeePlanet logotype" class="logotype">
 				</a>
 				<ul class="navigation__ul">
 					<li class="navigation__li">
@@ -53,10 +53,10 @@
 			</nav>
 		</header>
 		<main>
-			<h1 class="visually-hidden">
-				CoffeePlanet's site
-			</h1>
 			<section class="first_screen">
+				<h1 class="visually-hidden">
+					CoffeePlanet's site
+				</h1>
 				<div class="container">
 					<div class="slogan">
 						<p class="slogan__text">
@@ -74,6 +74,9 @@
 				</div>
 			</section>
 			<section class="catalog container">
+				<h2 class="visually-hidden">
+					Make a choice
+				</h2>
 				<p class="catalog__header">
 					Make a choice
 				</p>
@@ -101,7 +104,7 @@
 					<li class="catalog__li">
 						<a href="#" class="catalog__a">
 							<figure>
-								<img class="catalog__photo" src="../img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+								<img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
 								<figcaption class="catalog__title">
 									Chocolate Mint Mocha
 								</figcaption>
@@ -114,7 +117,7 @@
 					<li class="catalog__li">
 						<a href="#" class="catalog__a">
 							<figure>
-								<img class="catalog__photo" src="../img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+								<img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
 								<figcaption class="catalog__title">
 									Chocolate Mint Mocha
 								</figcaption>
@@ -127,7 +130,7 @@
 					<li class="catalog__li">
 						<a href="#" class="catalog__a">
 							<figure>
-								<img class="catalog__photo" src="../img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+								<img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
 								<figcaption class="catalog__title">
 									Chocolate Mint Mocha
 								</figcaption>
@@ -140,7 +143,7 @@
 					<li class="catalog__li">
 						<a href="#" class="catalog__a">
 							<figure>
-								<img class="catalog__photo" src="../img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+								<img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
 								<figcaption class="catalog__title">
 									Chocolate Mint Mocha
 								</figcaption>
@@ -153,7 +156,10 @@
 				</ul>
 			</section>
 			<section class="welcome container">
-				<img src="../img/slider.jpg" alt="Photos Inside Cafe" class="welcome__slider">
+				<h2 class="visually-hidden">
+					Welcome
+				</h2>
+				<img src="img/slider.jpg" alt="Photos Inside Cafe" class="welcome__slider">
 				<p class="welcome__header">
 					Welcome to CoffeePlanet
 				</p>
@@ -167,10 +173,10 @@
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste 	
 				</p>
 			</section>
-			<h2 class="visually-hidden">
-				Feedbacks
-			</h2>
 			<section class="feature container">
+				<h2 class="visually-hidden">
+					Our features
+				</h2>
 				<p class="feature__head">
 					Our features
 				</p>
@@ -180,22 +186,22 @@
 				{% set featuresData = [
 					{
 						name:'Coffee and tea',
-						src: '../img/icons/noun_Coffee_848419.svg',
+						src: 'img/icons/noun_Coffee_848419.svg',
 						text:'Coffee and tea'
 					},
 					{
-						name:'Coffee and tea',
-						src: '../img/icons/noun_muffin_572526.svg',
+						name:'Tasty sweets',
+						src: 'img/icons/noun_muffin_572526.svg',
 						text:'Tasty sweets'
 					},
 					{
-						name:'Coffee and tea',
-						src: '../img/icons/noun_wifi_2452937.svg',
+						name:'Free WiFi',
+						src: 'img/icons/noun_wifi_2452937.svg',
 						text:'Free WiFi'
 					},
 					{
-						name:'Coffee and tea',
-						src: '../img/icons/noun_Sofa_1526269.svg',
+						name:'Comfortable seats',
+						src: 'img/icons/noun_Sofa_1526269.svg',
 						text:'Comfortable seats'
 					}
 					] %}
@@ -211,25 +217,31 @@
 					</ul>
 				</section>
 				<section class="feedback container" >
+					<h2 class="visually-hidden">
+						Feedbacks
+					</h2>
 					<p class="feedback__header">Our happy visitors:</p>
 					{% set usersData = [
 						{
 							name:'Denis Simpson',
 							header:'Denis Simpson',
 							src: 'img/man01.jpg',
-							date:'30.04.2019'
+							date:'30.04.2019',
+							datetime: '2019-04-30'
 						},
 						{
 							name:'Andrew Smith',
 							header:'Andrew Smith',
 							src: 'img/man02.jpg',
-							date:'24.08.2018'
+							date:'24.08.2018',
+							datetime: '2018-08-24'
 						},
 						{
 							name:'George Cuper',
 							header:'George Cuper',
 							src: 'img/man03.jpg',
-							date:'12.05.2018'
+							date:'12.05.2018',
+							datetime: '2018-05-12'
 						}
 						] %}
 						<ul class="feedback__rows">
@@ -242,7 +254,7 @@
 								<p class="feedback__text" >
 									Lorem ipsum dolor sit amet, conse tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
 								</p>
-								<time class="feedback__date">{{ user.date }}</time>
+								<time class="feedback__date" datetime="{{ user.datetime }}">{{ user.date }}</time>
 							</li>
 							{% endfor %}
 						</ul>
