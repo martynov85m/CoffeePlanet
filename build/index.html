@@ -24,16 +24,16 @@
         </a>
         <ul class="navigation__ul">
           <li class="navigation__li">
-            <a href="#" class="navigation__link"> Menu </a>
+            <a href="#menu" class="navigation__link"> Menu </a>
           </li>
           <li class="navigation__li">
-            <a href="#" class="navigation__link"> About </a>
+            <a href="#about" class="navigation__link"> About </a>
           </li>
           <li class="navigation__li">
-            <a href="#" class="navigation__link"> Features </a>
+            <a href="#features" class="navigation__link"> Features </a>
           </li>
           <li class="navigation__li">
-            <a href="#" class="navigation__link"> Contacts </a>
+            <a href="#contacts" class="navigation__link"> Contacts </a>
           </li>
           <li class="navigation__li_tel">
             <a href="tel:+12538675413" class="navigation__link_tel"> +1 253 867-54-13 </a>
@@ -54,71 +54,122 @@
           </div>
         </div>
       </section>
-      <section class="catalog container">
-        <h2 class="visually-hidden"> Make a choice </h2>
-        <p class="catalog__header"> Make a choice </p>
+      <section id="menu" class="catalog container">
+        <h2 class="catalog__header"> Make a choice </h2>
         <p class="catalog__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
         <ul class="catalog__tab">
-          <li class="catalog__tab_li">
-            <a href="#" class="catalog__tab_a"> coffee </a>
+          <li class="catalog__tab_li active">
+            <a href="#coffee" class="catalog__tab_a"> coffee </a>
           </li>
           <li class="catalog__tab_li">
-            <a href="#" class="catalog__tab_a"> sweets </a>
+            <a href="#sweets" class="catalog__tab_a"> sweets </a>
           </li>
           <li class="catalog__tab_li">
-            <a href="#" class="catalog__tab_a"> snacks </a>
+            <a href="#snacks" class="catalog__tab_a"> snacks </a>
           </li>
         </ul>
-        <ul class="catalog__ul">
-          <li class="catalog__li">
-            <a href="#" class="catalog__a">
+        <ul class="catalog__content">
+          <li id="coffee" class="catalog__content_li row active">
+            <a href="#" class="catalog__content_a">
               <figure>
-                <img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
-                <figcaption class="catalog__title"> Chocolate Mint Mocha </figcaption>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Chocolate Mint Mocha </figcaption>
               </figure>
-              <p class="catalog__price"> $3 </p>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Chocolate Mint Mocha </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Chocolate Mint Mocha </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Chocolate Mint Mocha </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
             </a>
           </li>
-          <li class="catalog__li">
-            <a href="#" class="catalog__a">
+          <li id="sweets" class="catalog__content_li row d-n">
+            <a href="#" class="catalog__content_a">
               <figure>
-                <img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
-                <figcaption class="catalog__title"> Chocolate Mint Mocha </figcaption>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Sweets </figcaption>
               </figure>
-              <p class="catalog__price"> $3 </p>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Sweets </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Sweets </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Sweets </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
             </a>
           </li>
-          <li class="catalog__li">
-            <a href="#" class="catalog__a">
+          <li id="snacks" class="catalog__content_li row d-n">
+            <a href="#" class="catalog__content_a">
               <figure>
-                <img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
-                <figcaption class="catalog__title"> Chocolate Mint Mocha </figcaption>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Snacks </figcaption>
               </figure>
-              <p class="catalog__price"> $3 </p>
+              <p class="catalog__content_price"> $3 </p>
             </a>
-          </li>
-          <li class="catalog__li">
-            <a href="#" class="catalog__a">
+            <a href="#" class="catalog__content_a">
               <figure>
-                <img class="catalog__photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
-                <figcaption class="catalog__title"> Chocolate Mint Mocha </figcaption>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Snacks </figcaption>
               </figure>
-              <p class="catalog__price"> $3 </p>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Snacks </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
+            </a>
+            <a href="#" class="catalog__content_a">
+              <figure>
+                <img class="catalog__content_photo" src="img/mit-chip-frappe.jpg" alt="Chocolate Mint Mocha">
+                <figcaption class="catalog__content_title"> Snacks </figcaption>
+              </figure>
+              <p class="catalog__content_price"> $3 </p>
             </a>
           </li>
         </ul>
       </section>
-      <section class="welcome container">
-        <h2 class="visually-hidden"> Welcome </h2>
+      <section id="about" class="welcome container">
         <img src="img/slider.jpg" alt="Photos Inside Cafe" class="welcome__slider">
-        <p class="welcome__header"> Welcome to CoffeePlanet </p>
+        <h2 class="welcome__header"> Welcome to CoffeePlanet </h2>
         <p class="welcome__text1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea </p>
         <p class="welcome__text2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in </p>
         <p class="welcome__text3"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste </p>
       </section>
-      <section class="features container">
-        <h2 class="visually-hidden"> Our features </h2>
-        <p class="features__head"> Our features </p>
+      <section id="features" class="features container">
+        <h2 class="features__head"> Our features </h2>
         <p class="features__about"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </p>
         <ul class="features__list">
           <li class="features__card features__card_coffee"> Coffee and tea </li>
@@ -128,8 +179,7 @@
         </ul>
       </section>
       <section class="feedback container">
-        <h2 class="visually-hidden"> Feedbacks </h2>
-        <p class="feedback__header">Our happy visitors:</p>
+        <h2 class="feedback__header">Our happy visitors: </h2>
         <ul class="feedback__rows">
           <li class="feedback__card">
             <figure>

@@ -59,6 +59,10 @@ img, svg {
 		background-color: @green_line;
 	}
 }
+a:focus,
+a:active {
+	outline: 2px solid @green_line;
+}
 /** Atomic classes **/
 .d-n {
 	display: none;
@@ -77,8 +81,8 @@ img, svg {
 	padding-top: 185px;
 	background: #fff url(../img/first-scr.jpg) no-repeat;
 	background-size: cover;
-	padding-bottom: 260px;
-	margin-bottom: 90px;
+	padding-bottom: 265px;
+	min-height: 100vh;
 }
 .navigation {
 	display: flex;
@@ -166,10 +170,12 @@ img, svg {
 	}
 }
 .catalog {
-	padding-top: 90px;
+	padding-top: 180px;
+	padding-bottom: 85px;
 	&__header{
 		text-align: center;
 		font-size: 48px;
+		font-weight: 400;
 		padding-bottom: 45px;
 		.media(330px,  {
 			font-size: 32px;
@@ -178,82 +184,90 @@ img, svg {
 	}
 	&__text {
 		margin: 0 auto;
+		margin-bottom: 60px;
 		text-align: center;
 		width: 570px;
 		font-size: 14px;
 		line-height: 21px;
+		color: #555;
 		.media(586px,  {
 			width: 90%;
 			});
 	}
 	&__tab {
-		.row-flex();
-		&_li {
-			.size(4);
-			margin: 0 auto;
-			text-align: center;
-			list-style-type: none;
-			padding-top: 65px;
+		width: 300px;
+		margin: 0 auto;
+		margin-bottom: 35px;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		list-style: none;
+		&_li {		
+			font-size: 16px;
+			font-weight: 600;
+			padding: 2px 5px;
+			border-bottom: 2px solid transparent;
+			transition: 0.5s;
+			&.active, &:hover, &:focus, &:active {
+				border-bottom: 2px solid @green_line;
+				a {
+					color: @green;
+				}
+			}
 		}
 		&_a {
 			text-decoration: none;
-			font-size: 16px;
-			line-height: 21px;
-			font-weight: 600;
 			color: #000;
-			position: relative;
-			&:hover {
-				color: @green_line;
-			}
-			&:after {
-				content: '';
-				display: inline-block;
-				border-bottom: 1px solid @green_line;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 0;
-				transition: width 0.3s;
-			}
-			&:hover:after {
-				width: 100%;
+			transition: 0.5s;
+			&:hover, &:focus, &:active {
+				color: @green;
 			}
 		}
 	}
-	&__ul {
-		.row-flex();
-	}
-	&__li {
-		.col();
-		.size(3);
-		.size-lg(3);
-		.size-md(6);
-		.size-sm(6);
-		.size-xs(12);
-		list-style-type: none;
-		padding-top: 45px;
-	}
-	&__a {
-		text-decoration: none;
-	}
-	&__title {
-		font-size: 16px;
-		line-height: 21px;
-		color: #000;
-		text-align: center;
-		padding-top: 30px;
-	}
-	&__price {
-		font-size: 16px;
-		line-height: 21px;
-		color: @green;
-		text-align: center;
-		font-weight: 700;
-		padding-top: 15px;
+	.catalog__content {
+		padding-bottom: 70px;
+		&_li {
+			list-style-type: none;
+			display: none;
+			text-align: center;
+			.xs-block ({
+				justify-content: center;
+			});
+			&.active{
+				display: flex;
+			}
+		}
+		&_a {
+			.col();
+			.size(3);
+			.size-lg(3);
+			.size-md(4);
+			.size-sm(6);
+			.size-xs(10);
+			text-decoration: none;
+		}
+		&_photo {
+			width: 100%;
+			height: auto;
+		}
+		&_title {
+			font-size: 16px;
+			line-height: 21px;
+			color: #010101;
+			padding-top: 30px;
+		}
+		&_price {
+			font-size: 16px;
+			line-height: 21px;
+			color: @green;
+			font-weight: 700;
+			padding: 15px 0px;
+		}
 	}
 }
 .welcome {
-	padding-top: 170px;
+	padding-top: 70px;
+	padding-bottom: 115px;
 	&__slider {
 		width: 568px;
 		padding-right: 20px;
@@ -262,6 +276,7 @@ img, svg {
 	}
 	&__header {
 		font-size: 48px;
+		font-weight: 400;
 		padding-top: 25px;
 		padding-bottom: 50px;
 		.media(330px,  {
@@ -285,10 +300,12 @@ img, svg {
 	}
 }
 .features {
+	padding-top: 115px;
 	margin-bottom: 45px;
 	text-align: center;
 	&__head {
 		font-size: 48px;
+		font-weight: 400;
 		margin-top: 30px;
 		padding-bottom: 35px;
 		.media(330px,  {
@@ -377,8 +394,8 @@ img, svg {
 .feedback {
 	&__header {
 		text-align: center;
-		font-family: 'Montserrat', sans-serif;
 		font-size: 48px;
+		font-weight: 400;
 		padding-top: 100px;
 		padding-bottom: 50px;
 		.media(330px,  {
