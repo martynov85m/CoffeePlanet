@@ -279,84 +279,85 @@
 						Comfortable seats
 					</li>
 				</ul>
+			</section>
+			<section class="feedback container" >
+				<h2 class="feedback__header">
+					Our happy visitors:
+				</h2>
+				{% set usersData = [
+					{
+						name:'Denis Simpson',
+						header:'Denis Simpson',
+						src: 'img/man01.jpg',
+						date:'30.04.2019',
+						datetime: '2019-04-30'
+					},
+					{
+						name:'Andrew Smith',
+						header:'Andrew Smith',
+						src: 'img/man02.jpg',
+						date:'24.08.2018',
+						datetime: '2018-08-24'
+					},
+					{
+						name:'George Cuper',
+						header:'George Cuper',
+						src: 'img/man03.jpg',
+						date:'12.05.2018',
+						datetime: '2018-05-12'
+					}
+				] %}
+				<ul class="feedback__rows">
+					{% for user in usersData %}
+					<li class="feedback__card">						
+						<figure>
+							<img class="feedback__photo" src="{{ user.src }}" alt="{{ user.name }}">
+							<figcaption class="feedback__title">{{ user.header }}</figcaption>
+						</figure>
+						<p class="feedback__text" >
+							Lorem ipsum dolor sit amet, conse tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+						</p>
+						<time class="feedback__date" datetime="{{ user.datetime }}">{{ user.date }}</time>
+					</li>
+					{% endfor %}
+				</ul>
+			</section>
+			<section class="contacts container">
+				<h2 class="visually-hidden">CoffeePlanet Contacts
+				</h2>
+				<section class="contacts-info">
+					<h3 class="contacts-info__header">
+						Come to us!
+					</h3>
+					<p class="contacts-info__p contacts-info__p_time">
+						8:00-23:00
+					</p>
+					<p class="contacts-info__p contacts-info__p_address">
+						st. Ever green teras 23
+					</p>
+					<p class="contacts-info__p contacts-info__p_tel">
+						<a href="tel:+12538675413" class="contacts-info__link">
+							+1 253 867-54-13
+						</a>
+					</p>
+					<p class="contacts-info__p contacts-info__p_mail">
+						<a href="mail:coffeeplanet@mail.com" class="contacts-info__link">
+							coffeeplanet@mail.com
+						</a>
+					</p>
 				</section>
-				<section class="feedback container" >
-					<h2 class="feedback__header">Our happy visitors:
-					</h2>
-					{% set usersData = [
-						{
-							name:'Denis Simpson',
-							header:'Denis Simpson',
-							src: 'img/man01.jpg',
-							date:'30.04.2019',
-							datetime: '2019-04-30'
-						},
-						{
-							name:'Andrew Smith',
-							header:'Andrew Smith',
-							src: 'img/man02.jpg',
-							date:'24.08.2018',
-							datetime: '2018-08-24'
-						},
-						{
-							name:'George Cuper',
-							header:'George Cuper',
-							src: 'img/man03.jpg',
-							date:'12.05.2018',
-							datetime: '2018-05-12'
-						}
-						] %}
-						<ul class="feedback__rows">
-							{% for user in usersData %}
-							<li class="feedback__card">						
-								<figure>
-									<img class="feedback__photo" src="{{ user.src }}" alt="{{ user.name }}">
-									<figcaption class="feedback__title">{{ user.header }}</figcaption>
-								</figure>
-								<p class="feedback__text" >
-									Lorem ipsum dolor sit amet, conse tetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-								</p>
-								<time class="feedback__date" datetime="{{ user.datetime }}">{{ user.date }}</time>
-							</li>
-							{% endfor %}
-						</ul>
-					</section>
-					<section class="contacts container">
-						<h2 class="visually-hidden">CoffeePlanet Contacts
-						</h2>
-						<section class="contacts-info">
-							<h3 class="contacts-info__header">
-								Come to us!
-							</h3>
-							<p class="contacts-info__p contacts-info__p_time">
-								8:00-23:00
-							</p>
-							<p class="contacts-info__p contacts-info__p_address">
-								st. Ever green teras 23
-							</p>
-							<p class="contacts-info__p contacts-info__p_tel">
-								<a href="tel:+12538675413" class="contacts-info__link">
-									+1 253 867-54-13
-								</a>
-							</p>
-							<p class="contacts-info__p contacts-info__p_mail">
-								<a href="mail:coffeeplanet@mail.com" class="contacts-info__link">
-									coffeeplanet@mail.com
-								</a>
-							</p>
-						</section>
-						<div class="contacts-map">
-							<a href="https://www.google.ru/maps/place/Nyvky,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4683861,30.4062623,15.79z/data=!4m5!3m4!1s0x40d4cc566b731ad9:0xcd717ffd1eeb3cea!8m2!3d50.4642389!4d30.4058432?hl=ru" rel="nofollow noopener" target="_blank">
-								<img src="img/map.jpg" alt="Map" class="contacts-map__img"><span class="visually-hidden">Google maps link</span>
-							</a>
-						</div>
-						<div id="map" class="contacts-map__container">
-						</div>
-					</section>
-					<footer class="footer container">
-						Copyright 2019 CoffeePlanet
-					</footer>
-				</main>
-				<script src="./js/js.js"></script>
-			</body>
-			</html>
+				<div class="contacts-map">
+					<a href="https://www.google.ru/maps/place/Nyvky,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4683861,30.4062623,15.79z/data=!4m5!3m4!1s0x40d4cc566b731ad9:0xcd717ffd1eeb3cea!8m2!3d50.4642389!4d30.4058432?hl=ru" rel="nofollow noopener" target="_blank">
+						<img src="img/map.jpg" alt="Map" class="contacts-map__img"><span class="visually-hidden">Google maps link</span>
+					</a>
+				</div>
+				<div id="map" class="contacts-map__container">
+				</div>
+			</section>
+			<footer class="footer container">
+				Copyright 2019 CoffeePlanet
+			</footer>
+		</main>
+	<script src="./js/js.js"></script>
+	</body>
+</html>
