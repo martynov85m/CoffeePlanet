@@ -105,13 +105,20 @@ a:active {
 	height: 20px;
 	position:relative;
 	transition: 0.5s;
-	&:hover, &:active, &:focus {
+	&.closer {
+		position: fixed;
+		@offset: 20px;
+		top: @offset;
+		right: @offset;
+		z-index: 5;
+	}
+	&:hover, &:active, &:focus, &.closer {
 		border-top-color: @green_line;
 		border-bottom-color: @green_line;
 		outline: none;
 		transform: scaleY(1.3);
 	}
-	&:hover:before, &:active:before {
+	&:hover:before, &:active:before, &:focus:before, &.closer:before {
 		border-bottom-color: @green_line;
 	}
 	&:before{
@@ -155,6 +162,30 @@ a:active {
 		.media (320px,  {
 			left: 15px;
 		});
+		&.isOpened {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			z-index: 4;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0,0,0,0.9);
+			li {
+				margin: 0;
+				text-align: center;
+			}
+			li + li {
+				margin-top: 30px;
+			}
+			a {
+				font-size: 48px;
+				color: #fff;
+			}
+		}
 	}
 	&__li + &__li {
 		padding-left: 15px;
