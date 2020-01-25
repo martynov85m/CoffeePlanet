@@ -80,10 +80,13 @@ a:active {
 }
 /** Atomic classes **/
 .d-n {
-	display: none;
+	display: none !important; 
 }
 .d-b {
-	display: block;
+	display: block !important;
+}
+.ov-h {
+	overflow: hidden;
 }
 /** General classes **/
 .header {
@@ -663,4 +666,133 @@ a:active {
 	font-size: 14px;
 	color: #555;
 	margin-bottom: 40px;
+}
+
+/* Preloader */
+
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #eee;
+	display: flex;
+	z-index: 9999;
+	&__img {
+		position: absolute;
+		display: block;
+		@size: 150px;
+		width: @size;
+		height: @size;
+		
+	}
+	.cup {
+		bottom: 0;
+		left: 100px;
+		width: 80px;
+		height: 80px;
+	}
+	.pot {
+		top: 20px;
+		left: 120px;
+		animation: pot-rotate 5s ease-in;
+		&:before {
+			content: '';
+			display: block;
+			width: 0px;
+			border-bottom: 2px dashed #1e1201;
+			top: 23px;
+			right: 120px;
+			position: absolute;
+			animation: coffee-stream 5s ease-in;
+		}
+	}
+}
+.opacity-animation {
+	animation: opacity-animation 5s;
+}
+.wrap {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	position: relative;
+}
+@keyframes pot-rotate {
+	0 {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(-45deg);
+	}
+	45% {
+		transform: rotate(-90deg);
+	}
+	65% {
+		transform: rotate(-90deg);
+	}
+	95% {
+		transform: rotate(-45deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+@keyframes coffee-stream {
+	0 {
+		width: 0;
+	}
+	47% {
+		width: 5px;
+	}
+	52% {
+		width: 20px;
+	}
+	55% {
+		width: 100px;
+	}
+	65% {
+		width: 90px;
+	}
+	70% {
+		width: 30px;
+	}
+	85% {
+		width: 10px;
+	}
+	100% {
+		width: 0;
+	}
+}
+@keyframes opacity-animation {
+	0 {
+		opacity: 2;
+	}
+	72% {
+		opacity: 1.5;
+	}
+	75% {
+		opacity: 1.1;
+	}
+	85% {
+		opacity: 1;
+	}
+	93% {
+		opacity: 0.9;
+	}
+	95% {
+		opacity: 0.7;
+	}
+	97% {
+		opacity: 0.5;
+	}
+	98% {
+		opacity: 0.3;
+	}
+	99% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
