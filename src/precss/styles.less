@@ -80,12 +80,24 @@ a:active {
 }
 /** Atomic classes **/
 .d-n {
-	display: none;
+	display: none !important;
 }
 .d-b {
-	display: block;
+	display: block !important;
+}
+.ov-h {
+	overflow: hidden;
 }
 /** General classes **/
+::-webkit-scrollbar {
+	width: 10px;
+	height: 5px;
+	background-color: #eee;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: @green_line;
+}
 .header {
 	position: absolute;
 	width: 100%;
