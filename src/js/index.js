@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+$(function(){
 
 	var mobileBtn = document.querySelector('.mobile-menu');
 	var navigation = document.querySelector('.navigation__ul');
@@ -11,37 +11,17 @@ window.addEventListener('load', function(){
 		mobileBtn.classList.remove('closer');
 	});
 
-	var firstTab = document.querySelector('.catalog__tab > li:first-child');
-	var secondTab = document.querySelector('.catalog__tab > li:nth-child(2)');
-	var thirdTab = document.querySelector('.catalog__tab > li:last-child');
-	var firstContent = document.querySelector('.catalog__content > li:first-child');
-	var secondContent = document.querySelector('.catalog__content > li:nth-child(2)');
-	var thirdContent = document.querySelector('.catalog__content > li:last-child');
+	var linkTab = $('.open_tab');
+	var menuTab = $('.catalog__content_li');
 
-	firstTab.addEventListener('click', function(){
-		firstTab.classList.add('active');
-		secondTab.classList.remove('active');
-		thirdTab.classList.remove('active');
-		firstContent.classList.remove('d-n');
-		secondContent.classList.add('d-n');
-		thirdContent.classList.add('d-n');
-	});
+	linkTab.on('click', function(clickTab){
+		clickTab.preventDefault();
+		var target = $(clickTab.target);
+		target.addClass('active');
 
-	secondTab.addEventListener('click', function(){
-		firstTab.classList.remove('active');
-		secondTab.classList.add('active');
-		thirdTab.classList.remove('active');
-		firstContent.classList.add('d-n');
-		secondContent.classList.remove('d-n');
-		thirdContent.classList.add('d-n');
-	});
-
-	thirdTab.addEventListener('click', function(){
-		firstTab.classList.remove('active');
-		secondTab.classList.remove('active');
-		thirdTab.classList.add('active');
-		firstContent.classList.add('d-n');
-		secondContent.classList.add('d-n');
-		thirdContent.classList.remove('d-n');
+		var link = target.attr('href');
+		var activeTab = $(link);
+		menuTab.addClass('d-n');
+		activeTab.removeClass('d-n');
 	});
 });
