@@ -68,10 +68,10 @@
 							More than simple coffee
 						</p>
 						<p class="slogan_btns">
-							<a href="#" class="btn slogan__btn">
+							<a href="#book" class="btn slogan__btn btn_modal">
 								Book a table
 							</a>
-							<a href="#" class="btn slogan__btn slogan__btn_white">
+							<a href="#video" class="btn slogan__btn slogan__btn_white btn_modal">
 								Watch video
 							</a>
 						</p>
@@ -87,17 +87,17 @@
 				</p>
 				<ul class="catalog__tab">
 					<li class="catalog__tab_li">
-						<a href="#coffee" class="catalog__tab_a open_tab">
+						<a href="#coffee" class="catalog__tab_a">
 							coffee
 						</a>
 					</li>
 					<li class="catalog__tab_li">
-						<a href="#sweets" class="catalog__tab_a open_tab">
+						<a href="#sweets" class="catalog__tab_a">
 							sweets
 						</a>
 					</li>
 					<li class="catalog__tab_li">
-						<a href="#snacks" class="catalog__tab_a open_tab">
+						<a href="#snacks" class="catalog__tab_a">
 							snacks
 						</a>
 					</li>
@@ -231,7 +231,7 @@
 						<div class="slide">
 							<img src="img/slider.jpg" alt="Photos Inside Cafe" class="welcome__slider">
 						</div>
-						<div class="slide d-n">
+						<div class="slide">
 							<img src="img/slider2.jpg" alt="Photos Inside Cafe" class="welcome__slider">
 						</div>
 					</figure>
@@ -254,7 +254,7 @@
 				<p class="welcome__text clear">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste 	
 				</p>
-				<a href="#Book" class="welcome__btn">
+				<a href="#book" class="welcome__btn btn_modal">
 					Book a table in our cozy coffee shop
 				</a>
 			</section>
@@ -362,7 +362,7 @@
 					<button class="closer">
 						<span class="visually-hidden"></span>
 					</button>
-					<section class="modal modal-book">
+					<section id="book" class="modal modal-book">
 						<h2 class="modal-book__head heads-global">
 							Book a table
 						</h2>
@@ -375,7 +375,7 @@
 							<button class="btn modal-book__btn" type="submit">Send</button>
 						</form>
 					</section>
-					<section class="modal modal-video">
+					<section id="video" class="modal modal-video">
 						<h2 class="visually-hidden">Watch a video</h2>
 						<div class="modal-video__youtube">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/C5vIEHHG1aA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -385,6 +385,7 @@
 			</div>
 		</main>
 	<script src="./js/jquery.min.js"></script>
+	<script src="./js/slick.min.js"></script>
 	<script src="./js/js.js"></script>
 	</body>
 </html>
