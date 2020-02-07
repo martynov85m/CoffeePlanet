@@ -1,6 +1,8 @@
 @import 'libs/smart-grid.less';
 @import 'libs/vars.less';
 @import 'libs/mixins.less';
+@import 'libs/slick.less';
+@import 'libs/slick-theme.less';
 
 *,
 *:before,
@@ -109,6 +111,10 @@ a:active {
 	width: 100%;
 	top: 0;
 	left: 0;
+	&.scrolled{
+		background-color: rgba(255,255,255,0.7);
+		position: fixed;
+	}
 }
 .mobile-menu {
 	display: none;
@@ -426,6 +432,7 @@ a:active {
 	margin-bottom: 40px;
 	float: left;
 	text-align: right;
+	width: 50%;
 	&__btn {
 		margin-top: 15px;
 		border: none;
