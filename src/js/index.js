@@ -11,32 +11,6 @@ $(function(){
 		mobileBtn.classList.remove('closer');
 	});
 
-	/* Modals */
-	var btnModals = $('.btn_modal');
-
-	btnModals.on('click', function(event){
-		event.preventDefault();
-		var target = $(event.target);
-		var link = target.attr('href');
-
-		var modal = $(link);
-		modal.addClass('active');
-
-		var container = modal.parents('.modal-container');
-		container.removeClass('d-n');
-
-	});
-
-	var closer = $('.closer');
-
-	closer.on('click', function(event){
-		var target = $(event.target);
-		var container = target.parents('.modal-container');
-		container.addClass('d-n');
-		var active = $('.modal-container .active');
-		active.removeClass('active');
-	});
-
 	/* Tabs */
 	var linkTab = $('.catalog__tab_a');
 	var menuTab = $('.catalog__content_li');
