@@ -238,10 +238,26 @@
           <section id="book" class="modal modal-book">
             <h2 class="modal-book__head heads-global"> Book a table </h2>
             <p class="modal-book__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
-            <form action="#" class="modal-book__form">
-              <input type="text" class="modal-book__input" placeholder="Name">
-              <input type="text" class="modal-book__input" placeholder="Phone">
+            <form action="http://localhost/func.php" method="POST" class="modal-book__form">
+              <input type="text" name="my-name" class="modal-book__input" placeholder="Name">
+              <input type="text" name="my-phone" class="modal-book__input" placeholder="Phone">
               <button class="btn modal-book__btn" type="submit">Send</button>
+              <script>
+                window.addEventListener('load', function()
+                {
+                  var form = $('.modal-book__form');
+                  form.on('submit', function(e)
+                  {
+                    e.preventDefault();
+                    var dataForm = form.serializeArray();
+                    $.post('http://localhost/func.php', dataForm, function(response)
+                    {
+                      console.log(response);
+                    });
+                  });
+                });
+
+              </script>
             </form>
           </section>
           <section id="video" class="modal modal-video">
